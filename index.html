@@ -57,6 +57,10 @@
         </div>
     </nav>
     <main>
+        <div class="button-container">
+            <button id="btn1">Adicionar Lote</button>
+            <button id="btn2">Finalizar Licitação</button>
+        </div>
         <div class="container">
             <div class="form">
                 <form action="#" method="post">
@@ -76,42 +80,34 @@
                             <input id="codigo" type="text" name="codigo" placeholder="Digite o código" required>
                         </div>
                         <div class="input-box">
-                            <label for="descricao">Descrição do item</label>
-                            <input id="descricao" type="text" name="descricao" placeholder="Digite a descrição" required>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="input-box">
                             <label for="quantidade">Quantidade</label>
-                            <input id="quantidade" type="tel" name="quantidade" placeholder="Digite a quantidade" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="unidade">Unidade de Medida</label>
-                            <input id="unidade" type="text" name="unidade" placeholder="Digite a unidade" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="preco">Preço Público</label>
-                            <input id="preco" type="text" name="preco" placeholder="Digite o preço" required>
+                            <input id="quantidade" type="text" name="quantidade" placeholder="Digite a quantidade" required>
                         </div>
                     </div>
                     <div class="input-group">
+                        <div class="input-box">
+                            <label for="publico">Preço Público</label>
+                            <input id="publico" type="tel" name="publico" placeholder="Digite a quantidade" required>
+                        </div>
                         <div class="input-box">
                             <label for="cotacao">Cotação</label>
-                            <input id="cotacao" type="text" name="cotacao" placeholder="Digite a cotação" required>
+                            <input id="cotacao" type="text" name="cotacao" placeholder="Digite a unidade" required>
                         </div>
                         <div class="input-box">
-                            <label for="preco_estimado">Preço Estimado</label>
-                            <input id="preco_estimado" type="text" name="preco_estimado" placeholder="Digite o preço estimado" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="media_precos">Média dos Preços</label>
-                            <input id="media_precos" type="text" name="media_precos" placeholder="Digite a média" required>
+                            <label for="midia">Mídia Especializada</label>
+                            <input id="midia" type="text" name="midia" placeholder="Digite o preço" required>
                         </div>
                     </div>
-                    <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Média</h6>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="observacao">Observação</label>
+                            <textarea id="observacao" name="observacao" placeholder="Digite suas observações aqui" required rows="4"></textarea>
                         </div>
+                    </div>
+            
+                    <div class="calculation-container">
+                            <h6>Média</h6>
+                        <table class="calculation-table">
                         <div class="gender-group">
                             <div class="gender-input">
                                 <input id="female" type="radio" name="gender">
@@ -131,11 +127,13 @@
                             </div>
                         </div>
                     </div>
+
+
+                    
                     <div class="login-button-fim">
                       <button type="button" onclick="window.location.href='#'">Calcular</button>
                       <button type="button" class="add-lote" onclick="window.location.href='#'">Finalizar Lote</button>
-                      <button type="button" onclick="window.location.href='#'">Adicionar Lote</button>
-                      <button type="button" onclick="window.location.href='#'">Finalizar Licitação</button>
+                     
                      
                   </div>
                 </form>

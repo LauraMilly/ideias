@@ -169,7 +169,7 @@ main {
   position: relative;
   z-index: 1;
   transition: margin-left 0.5s;
-  margin-left: -10px; /* Ajuste aqui para aproximar */
+  margin-left: -10px; 
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -180,15 +180,38 @@ main.shifted {
     margin-left: 50px;
 }
 
-.container {
-    width: 90%;
-    max-width: 700px; 
+.button-container {
+    position: fixed; /* ou absolute, dependendo do comportamento desejado */
+    top: 20px; /* ajuste conforme necessário */
+    right: 20px; /* ajuste conforme necessário */
     display: flex;
-    height: 70%;
+    gap: 10px; /* espaço entre os botões */
+    z-index: 3; /* garantir que fique acima de outros elementos */
+}
+
+.button-container button {
+    border: none;
+    background-color: #0607e9;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #0b01ccf1; /* Cor ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 800px; 
+    display: flex;
+    height: auto;
+    margin-left: 350px;
 }
 
 .form {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -222,14 +245,15 @@ main.shifted {
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #0d069ef1;
 }
+
 
 .form-header h1::after {
     content: '';
     display: block;
     width: 5rem;
-    height: 0.3rem;
+    height: 0.2rem;
     background-color: #0607e9;
     margin: 0 auto;
     position: relative;
@@ -280,6 +304,27 @@ main.shifted {
 
 .input-box input::placeholder {
     color: #000000be;
+}
+
+.input-box textarea {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 50%; 
+    resize: vertical; 
+    transition: border 0.3s, background-color 0.3s;
+}
+
+.input-box textarea:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box textarea:focus-visible {
+    outline: 2px solid #0607e9;
+    outline-offset: 2px;
 }
 
 .gender-group {
@@ -339,7 +384,7 @@ main.shifted {
 }
 
 .login-button-fim button:hover {
-    background-color: #6b63fff1; /* Cor ao passar o mouse */
+    background-color: #0900b1f1; /* Cor ao passar o mouse */
 }
 
 
