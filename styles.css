@@ -211,6 +211,27 @@ main.shifted {
     margin-left: 350px;
 }
 
+.input-container {
+    margin-left: -35px; /* Ajuste conforme necessário */
+}
+
+
+.add-input-btn {
+    border: none;
+    background-color: #0607e9;
+    color: white;
+    padding: 0.5rem 0.5rem; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 26px;
+    line-height: 1.1;
+    margin-right: 9px;
+}
+
+.add-input-btn:hover {
+    background-color: #0b01ccf1; 
+}
 .form {
   display: flex;
   flex-direction: column;

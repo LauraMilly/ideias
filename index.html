@@ -73,7 +73,10 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="item">Item</label>
-                            <input id="item" type="text" name="item" placeholder="Digite o item" required>
+                            <div class="input-container" style="display: flex; align-items: center;">
+                                <button type="button" class="add-input-btn" onclick="addInput()">+</button>
+                                <input id="item" type="text" name="item" placeholder="Digite o item" required class="item-input">
+                            </div>
                         </div>
                         <div class="input-box">
                             <label for="codigo">Código e-fisco</label>
