@@ -67,8 +67,20 @@
                     <div class="form-header">
                         <h1>Lote</h1>
                         <div class="login-button">
-                            <button type="button" onclick="window.location.href='#'">Adicionar Coluna</button>
+                            <button type="button" id="adicionarColuna">Adicionar Coluna</button>
                         </div>
+                        
+                        <div id="opcoes" class="hidden">
+                            <label class="opcao">
+                                <input type="radio" name="lote" value="aquisição">
+                                Lote de aquisição
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="lote" value="serviço">
+                                Lote de serviço
+                            </label>
+                        </div>
+                        
                     </div>
                     <div class="input-group">
                         <div class="input-box">

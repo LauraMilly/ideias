@@ -14,6 +14,10 @@ function addInput() {
         <label for="newItem">Novo Item</label>
         <input type="text" name="newItem" placeholder="Digite o novo item" required>
     `;
-    // Adiciona o novo input abaixo de todos os outros inputs, exceto a textarea
     container.appendChild(newInputBox);
 }
+
+document.getElementById('btn1').addEventListener('click', function() {
+    const opcoes = document.getElementById('opcoes');
+    opcoes.classList.toggle('show'); 
+});

@@ -181,12 +181,12 @@ main.shifted {
 }
 
 .button-container {
-    position: fixed; /* ou absolute, dependendo do comportamento desejado */
-    top: 20px; /* ajuste conforme necessário */
-    right: 20px; /* ajuste conforme necessário */
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
     display: flex;
-    gap: 10px; /* espaço entre os botões */
-    z-index: 3; /* garantir que fique acima de outros elementos */
+    gap: 10px; 
+    z-index: 3; 
 }
 
 .button-container button {
@@ -269,6 +269,43 @@ main.shifted {
     background-color: #0d069ef1;
 }
 
+#opcoes {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+    z-index: 4; 
+}
+
+#opcoes.show {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.opcao {
+    display: flex;
+    align-items: center; 
+    margin: 10px 0;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.opcao:hover {
+    background-color: rgba(6, 7, 233, 0.1); 
+}
+
+.opcao input[type="radio"] {
+    margin-right: 8px; 
+}
 
 .form-header h1::after {
     content: '';
@@ -297,6 +334,16 @@ main.shifted {
     margin-left: 60px;
 }
 
+.inputItem {
+    display: flex;
+    flex-direction: row;
+}
+#addItem {
+    padding: 10px;
+    height: 10px;
+    margin-top: 25px;
+    
+}
 .input-box input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
