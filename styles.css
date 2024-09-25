@@ -455,6 +455,13 @@ main.shifted {
     background-color: #0900b1f1; /* Cor ao passar o mouse */
 }
 
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex; /* ou flex, dependendo do layout desejado */
+}
 
 
 

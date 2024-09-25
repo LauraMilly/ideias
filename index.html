@@ -58,30 +58,26 @@
     </nav>
     <main>
         <div class="button-container">
-            <button id="btn1">Adicionar Lote</button>
-            <button id="btn2">Finalizar Licitação</button>
+            <button id="btnAddLote">Adicionar Lote</button>
+            <button id="btnFinalizar">Finalizar Licitação</button>
         </div>
-        <div class="container">
+        <div id="opcoes" class="hidden">
+            <div class="opcao" id="acquisition">
+                <input type="radio" name="lote" value="acquisition">
+                <label>Lote de Aquisição</label>
+            </div>
+            <div class="opcao" id="service">
+                <input type="radio" name="lote" value="service">
+                <label>Lote de Serviço</label>
+            </div>
+        </div>
+        <div class="container hidden" id="formContainer">
             <div class="form">
                 <form action="#" method="post">
                     <div class="form-header">
                         <h1>Lote</h1>
-                        <div class="login-button">
-                            <button type="button" id="adicionarColuna">Adicionar Coluna</button>
-                        </div>
-                        
-                        <div id="opcoes" class="hidden">
-                            <label class="opcao">
-                                <input type="radio" name="lote" value="aquisição">
-                                Lote de aquisição
-                            </label>
-                            <label class="opcao">
-                                <input type="radio" name="lote" value="serviço">
-                                Lote de serviço
-                            </label>
-                        </div>
-                        
                     </div>
+
                     <div class="input-group">
                         <div class="input-box">
                             <label for="item">Item</label>
@@ -102,15 +98,15 @@
                     <div class="input-group">
                         <div class="input-box">
                             <label for="publico">Preço Público</label>
-                            <input id="publico" type="tel" name="publico" placeholder="Digite a quantidade" required>
+                            <input id="publico" type="tel" name="publico" placeholder="Digite o preço público" required>
                         </div>
                         <div class="input-box">
                             <label for="cotacao">Cotação</label>
-                            <input id="cotacao" type="text" name="cotacao" placeholder="Digite a unidade" required>
+                            <input id="cotacao" type="text" name="cotacao" placeholder="Digite a cotação" required>
                         </div>
                         <div class="input-box">
                             <label for="midia">Mídia Especializada</label>
-                            <input id="midia" type="text" name="midia" placeholder="Digite o preço" required>
+                            <input id="midia" type="text" name="midia" placeholder="Digite a mídia" required>
                         </div>
                     </div>
                     <div class="input-group">
@@ -119,38 +115,10 @@
                             <textarea id="observacao" name="observacao" placeholder="Digite suas observações aqui" required rows="4"></textarea>
                         </div>
                     </div>
-            
-                    <div class="calculation-container">
-                            <h6>Média</h6>
-                        <table class="calculation-table">
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input id="female" type="radio" name="gender">
-                                <label for="female">Média</label>
-                            </div>
-                            <div class="gender-input">
-                                <input id="male" type="radio" name="gender">
-                                <label for="male">Mediana</label>
-                            </div>
-                            <div class="gender-input">
-                                <input id="others" type="radio" name="gender">
-                                <label for="others">Média quartil</label>
-                            </div>
-                            <div class="gender-input">
-                                <input id="none" type="radio" name="gender">
-                                <label for="none">Média Saneada</label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
                     <div class="login-button-fim">
-                      <button type="button" onclick="window.location.href='#'">Calcular</button>
-                      <button type="button" class="add-lote" onclick="window.location.href='#'">Finalizar Lote</button>
-                     
-                     
-                  </div>
+                        <button type="button" onclick="window.location.href='#'">Calcular</button>
+                        <button type="button" class="add-lote" onclick="window.location.href='#'">Finalizar Lote</button>
+                    </div>
                 </form>
             </div>
         </div>

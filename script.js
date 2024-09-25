@@ -6,18 +6,21 @@ document.getElementById('open_btn').addEventListener('click', function () {
     main.classList.toggle('shifted');
 });
 
-function addInput() {
-    const container = document.querySelector('.input-group');
-    const newInputBox = document.createElement('div');
-    newInputBox.classList.add('input-box');
-    newInputBox.innerHTML = `
-        <label for="newItem">Novo Item</label>
-        <input type="text" name="newItem" placeholder="Digite o novo item" required>
-    `;
-    container.appendChild(newInputBox);
-}
-
-document.getElementById('btn1').addEventListener('click', function() {
+document.getElementById('btnAddLote').addEventListener('click', function() {
     const opcoes = document.getElementById('opcoes');
-    opcoes.classList.toggle('show'); 
+    opcoes.classList.toggle('show');
+});
+
+document.querySelectorAll('.opcao').forEach(opcao => {
+    opcao.addEventListener('click', function() {
+        const formContainer = document.getElementById('formContainer');
+        if (this.id === 'acquisition') {
+            formContainer.classList.remove('hidden');
+            formContainer.classList.add('show');
+        } else {
+            formContainer.classList.remove('hidden');
+            formContainer.classList.add('show');
+            // Aqui você pode adicionar lógica para o formulário de "Serviço"
+        }
+    });
 });
