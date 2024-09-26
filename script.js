@@ -26,3 +26,40 @@ document.querySelectorAll('.opcao').forEach(opcao => {
         opcoes.classList.remove('show');
     });
 });
+
+
+function addInput() {
+    const addedItems = document.getElementById('addedItems');
+
+    const inputGroup = document.createElement('div');
+    inputGroup.className = 'input-group';
+
+    inputGroup.innerHTML = `
+        <div class="input-box">
+            <label for="item">Item</label>
+            <input type="text" name="item" placeholder="Digite o item" required>
+        </div>
+        <div class="input-box">
+            <label for="codigo">Código e-fisco</label>
+            <input type="text" name="codigo" placeholder="Digite o código" required>
+        </div>
+        <div class="input-box">
+            <label for="quantidade">Quantidade</label>
+            <input type="text" name="quantidade" placeholder="Digite a quantidade" required>
+        </div>
+        <div class="input-box">
+            <label for="publico">Preço Público</label>
+            <input type="tel" name="publico" placeholder="Digite o preço público" required>
+        </div>
+        <div class="input-box">
+            <label for="cotacao">Cotação</label>
+            <input type="text" name="cotacao" placeholder="Digite a cotação" required>
+        </div>
+        <div class="input-box">
+            <label for="midia">Mídia Especializada</label>
+            <input type="text" name="midia" placeholder="Digite a mídia" required>
+        </div>
+    `;
+
+    addedItems.appendChild(inputGroup);
+}

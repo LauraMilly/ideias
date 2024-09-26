@@ -452,7 +452,7 @@ main.shifted {
 }
 
 .login-button-fim button:hover {
-    background-color: #0900b1f1; /* Cor ao passar o mouse */
+    background-color: #0900b1f1; 
 }
 
 .hidden {
@@ -460,7 +460,7 @@ main.shifted {
 }
 
 .show {
-    display: flex; /* ou flex, dependendo do layout desejado */
+    display: flex; 
 }
 
 
