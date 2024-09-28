@@ -462,6 +462,22 @@ main.shifted {
 .show {
     display: flex; 
 }
+/* Código CSS existente... */
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-bottom: 20px; /* Espaçamento entre grupos de inputs */
+}
+
+.input-box {
+    flex: 1; /* Cada input-box ocupará espaço igual */
+    min-width: 0; /* Permitir que os inputs encolham */
+}
+
+/* Resto do CSS existente... */
+
 
 
 

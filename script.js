@@ -27,10 +27,10 @@ document.querySelectorAll('.opcao').forEach(opcao => {
     });
 });
 
-
 function addInput() {
     const addedItems = document.getElementById('addedItems');
 
+    // Cria um grupo de inputs
     const inputGroup = document.createElement('div');
     inputGroup.className = 'input-group';
 
@@ -59,7 +59,17 @@ function addInput() {
             <label for="midia">Mídia Especializada</label>
             <input type="text" name="midia" placeholder="Digite a mídia" required>
         </div>
+        <button type="button" onclick="this.parentElement.parentElement.remove()">Remover</button>
     `;
 
-    addedItems.appendChild(inputGroup);
+    // Insira o novo grupo de inputs
+    const currentInputs = addedItems.querySelectorAll('.input-group');
+    if (currentInputs.length < 3) {
+        addedItems.appendChild(inputGroup);
+    } else {
+        const newGroup = document.createElement('div');
+        newGroup.className = 'input-group';
+        newGroup.appendChild(inputGroup);
+        addedItems.appendChild(newGroup);
+    }
 }
