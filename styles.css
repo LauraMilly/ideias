@@ -466,7 +466,7 @@ main.shifted {
 
 .input-group {
     display: flex;
-    justify-content: space-between;
+
     gap: 20px; /* Espaçamento entre os itens */
     margin-bottom: 20px; /* Espaçamento entre grupos de inputs */
 }
@@ -478,8 +478,31 @@ main.shifted {
 
 /* Resto do CSS existente... */
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
 
+}
 
+.cont {
+    display: flex;
+}
+.cont-pai {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cont-pai > button {
+    border: none;
+    background-color: #0607e9;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    width: 100px;
+    margin-left: 87%;
+}
 
 
 @media screen and (max-width: 1330px) {

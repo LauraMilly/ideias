@@ -35,31 +35,40 @@ function addInput() {
     inputGroup.className = 'input-group';
 
     inputGroup.innerHTML = `
-        <div class="input-box">
+    <div class= 'cont-pai'>
+    <div class= "cont">
+        <div class="input-box flex-column">
             <label for="item">Item</label>
             <input type="text" name="item" placeholder="Digite o item" required>
         </div>
-        <div class="input-box">
+        <div class="input-box flex-column">
             <label for="codigo">Código e-fisco</label>
             <input type="text" name="codigo" placeholder="Digite o código" required>
         </div>
-        <div class="input-box">
+        <div class="input-box flex-column">
             <label for="quantidade">Quantidade</label>
             <input type="text" name="quantidade" placeholder="Digite a quantidade" required>
         </div>
-        <div class="input-box">
+      </div>  
+
+      <div class="cont">
+        <div class="input-box flex-column">
             <label for="publico">Preço Público</label>
             <input type="tel" name="publico" placeholder="Digite o preço público" required>
         </div>
-        <div class="input-box">
+        <div class="input-box flex-column">
             <label for="cotacao">Cotação</label>
             <input type="text" name="cotacao" placeholder="Digite a cotação" required>
         </div>
-        <div class="input-box">
+        <div class="input-box flex-column">
             <label for="midia">Mídia Especializada</label>
             <input type="text" name="midia" placeholder="Digite a mídia" required>
         </div>
-        <button type="button" onclick="this.parentElement.parentElement.remove()">Remover</button>
+       </div> 
+       <button type="button" onclick="this.parentElement.parentElement.remove()">Remover</button>
+       </div>
+
+
     `;
 
     // Insira o novo grupo de inputs
